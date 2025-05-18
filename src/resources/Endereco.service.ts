@@ -10,7 +10,11 @@ class EnderecoService {
         if(response.status === 400){
             throw new Error()
         }
-        const endereco:Endereco = await response.json();
+        const json = await response.json();
+        if(json.erro){
+            throw new Error()
+        }
+        const endereco:Endereco = json;
         return endereco;
     }
 }
