@@ -3,5 +3,6 @@ export type Endereco = {
     logradouro: string;
     bairro: string;
     localidade: string;
+    numero: string;
     uf: string;
 }
